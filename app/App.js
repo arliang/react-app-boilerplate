@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 
+import TodoList from './TodoList'
+import TASKS from './TASKS'
+
 class App extends Component {
   render(){
+    // console.log(this.props.tasks)
     return (
-      <h1>Hello World</h1>
+      <TodoList tasks={this.props.tasks} />
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<App tasks={TASKS} />, document.getElementById('root'));
